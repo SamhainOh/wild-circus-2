@@ -1,4 +1,4 @@
-'use strict';
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('CartHasProducts', {
@@ -12,10 +12,18 @@ module.exports = {
         type: Sequelize.STRING
       },
       cart_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'Carts',
+          foreignKey:'id'
+        }
       },
       product_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'Products',
+          foreignKey:'id'
+        }
       },
       createdAt: {
         allowNull: false,

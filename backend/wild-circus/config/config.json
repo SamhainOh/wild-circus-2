@@ -4,8 +4,7 @@
     "password": "Shonagon83",
     "database": "wild_circus_dev",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

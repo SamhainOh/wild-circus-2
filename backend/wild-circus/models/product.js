@@ -1,4 +1,4 @@
-'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const Product = sequelize.define('Product', {
     name: DataTypes.STRING,
@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Product.associate = function(models) {
     // associations can be defined here
+    Product.belongsToMany(models.Cart,{through:'CartHasProducts', as:'products'});
   };
   return Product;
 };

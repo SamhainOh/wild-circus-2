@@ -1,4 +1,4 @@
-'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const Cart = sequelize.define('Cart', {
     statut: DataTypes.STRING,
@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Cart.associate = function(models) {
     // associations can be defined here
+    Cart.belongsTo(models.User,{foreignKey: 'user_id', as:'user'});
+    Cart.belongsToMany(models.Product,{through:'CartHasProducts',foreignKey: 'user_id',as:'products'});
   };
   return Cart;
 };
