@@ -1,0 +1,40 @@
+.navbarContainer {
+display: flex;
+justify-content: center;
+position: absolute;
+top:80%;
+#navBar {
+    // margin-top: 15px !important;
+    background-color: transparent !important;
+    display: flex;
+    justify-content: center;
+    .mr-auto {
+        width: 90vw;
+        justify-content: space-around;     
+        box-shadow: 0 0 5px 5px rgba(0,0,0,.4);
+        overflow: hidden;
+        border-radius: 0 0 40px 40px;
+        margin-left: 0 !important;
+        background: linear-gradient(to bottom, rgba(254,254,254,.1), rgb(0,0,0));
+    }
+        .mr-auto:hover{
+        border-bottom: 2px solid rgb(87,65,234);
+        box-shadow: 0 0 40px rgba(87,65,234,.5);
+    }
+
+    .nav-link {
+        color: white;
+        font-family: 'HelveticaNeue-Light';
+        font-size: 1.2em !important;     
+        text-align: center;    
+    }
+    .nav-link:hover{
+        color:rgb(87, 65, 234);
+        text-shadow: 0 0 0.15em rgba(87,65,234,.5);
+    }   
+}
+}
+
+
+
+
